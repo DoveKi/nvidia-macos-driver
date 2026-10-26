@@ -1,7 +1,7 @@
 #!/bin/bash
 set -u
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
-N=$HOME/nvmtl-build; S=$N/LIVE/plugin; L=$N/build.lock
+N=$HOME/nvmtl-build; S="$(dirname "$0")/../plugin"; L=$N/build.lock
 cd $S || exit 2
 [ -z "$(git status --porcelain)" ] || { echo "STOP: LIVE/plugin has uncommitted edits — commit them first:"; git status --short | head; exit 3; }
 C=$(git rev-parse --short HEAD); O=$N/LIVE/out/plugin-$C${RELEASE:+-release}; mkdir -p $O

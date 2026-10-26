@@ -510,6 +510,8 @@ static bool nvmtl_angle_chrome_family(void)
            strncmp(me, "Brave Browser", 13) == 0 ||
            strncmp(me, "Microsoft Edge", 14) == 0 ||
            strncmp(me, "Chromium", 8) == 0 ||
+	   strncmp(me, "哔哩哔哩", 12) == 0 ||
+     	   strncmp(me, "NeteaseMusic", 12) == 0 ||
            strncmp(me, "Discord", 7) == 0;
 }
 __attribute__((constructor)) static void nvmtl_angle_allow_nvidia(void)
